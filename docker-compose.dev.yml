@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/index.html:/app/index.html
+    depends_on:
+      api:
+        condition: service_healthy

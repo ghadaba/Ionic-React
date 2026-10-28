@@ -1,0 +1,32 @@
+{
+  "name": "film-match",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 8100",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 8100"
+  },
+  "dependencies": {
+    "@capacitor/camera": "^6.1.2",
+    "@capacitor/core": "^6.2.0",
+    "@ionic/pwa-elements": "^3.3.0",
+    "@ionic/react": "^8.4.3",
+    "@ionic/react-router": "^8.4.3",
+    "ionicons": "^7.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^5.3.4",
+    "react-router-dom": "^5.3.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
+}

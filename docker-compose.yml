@@ -1,0 +1,28 @@
+services:
+  api:
+    build: ./backend
+    environment:
+      PORT: 3001
+      DATA_DIR: /data
+      JWT_SECRET: ${JWT_SECRET:-film-match-dev-secret}
+      TMDB_API_KEY: ${TMDB_API_KEY:-}
+    volumes:
+      - film-data:/data
+    ports:
+      - "3001:3001"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+
+  web:
+    build: ./frontend
+    ports:
+      - "8100:80"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  film-data:

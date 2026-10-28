@@ -1,0 +1,7 @@
+{
+  "name": "film-match",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

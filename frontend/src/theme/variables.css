@@ -1,0 +1,330 @@
+:root {
+  --ion-color-primary: #4b91ff;
+  --ion-color-primary-rgb: 75, 145, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3974d4;
+  --ion-color-primary-tint: #68a3ff;
+
+  --ion-color-secondary: #91c5ff;
+  --ion-color-secondary-rgb: 145, 197, 255;
+  --ion-color-secondary-contrast: #08111e;
+  --ion-color-secondary-contrast-rgb: 8, 17, 30;
+  --ion-color-secondary-shade: #80addf;
+  --ion-color-secondary-tint: #9dcaff;
+
+  --ion-background-color: #080c13;
+  --ion-background-color-rgb: 8, 12, 19;
+  --ion-text-color: #f5f8ff;
+  --ion-text-color-rgb: 245, 248, 255;
+  --ion-toolbar-background: #0d1420;
+  --ion-item-background: #111a28;
+  --ion-card-background: #101927;
+  --ion-tab-bar-background: #0c121d;
+  --ion-border-color: rgba(165, 190, 224, 0.14);
+  --ion-color-step-50: #101722;
+  --ion-color-step-100: #171f2b;
+  --ion-color-step-150: #1d2633;
+  --ion-color-step-200: #242d3a;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  color-scheme: dark;
+  background: #080c13;
+  font-family: "Aptos", "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+ion-app {
+  background: #080c13;
+}
+
+ion-header {
+  box-shadow: none;
+}
+
+ion-toolbar {
+  --background: rgba(13, 20, 32, 0.96);
+  --color: #f5f8ff;
+  --border-color: rgba(165, 190, 224, 0.12);
+}
+
+ion-title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+ion-content::part(background) {
+  background-color: #080c13;
+  background-image:
+    linear-gradient(rgba(133, 171, 224, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(133, 171, 224, 0.025) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(41, 101, 187, 0.08), transparent 48%);
+  background-size: 40px 40px, 40px 40px, auto;
+}
+
+ion-card {
+  --background: rgba(16, 25, 39, 0.96);
+  border: 1px solid rgba(151, 179, 217, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+ion-card-title {
+  --color: #f5f8ff;
+}
+
+ion-card-content {
+  color: #d5e0ef;
+}
+
+ion-list {
+  padding: 0;
+  background: transparent;
+}
+
+ion-item {
+  --background: rgba(17, 26, 40, 0.94);
+  --border-color: rgba(151, 179, 217, 0.12);
+  --border-radius: 10px;
+  --highlight-color-focused: #4b91ff;
+  --padding-start: 16px;
+  --inner-padding-end: 14px;
+  margin-bottom: 9px;
+  border-radius: 10px;
+}
+
+ion-input,
+ion-textarea {
+  --color: #f5f8ff;
+  --placeholder-color: #8492a8;
+  --highlight-color-focused: #4b91ff;
+}
+
+ion-button {
+  --border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+ion-button[fill="outline"] {
+  --border-width: 1px;
+  --border-color: rgba(116, 169, 244, 0.6);
+  --color: #a9ccff;
+}
+
+ion-button[fill="clear"] {
+  --color: #a9ccff;
+}
+
+ion-searchbar {
+  --background: #111a28;
+  --border-radius: 10px;
+  --box-shadow: none;
+  --color: #f5f8ff;
+  --placeholder-color: #aab8ca;
+  --icon-color: #a0b3cc;
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+
+ion-note {
+  color: #aab8ca;
+}
+
+ion-tab-bar {
+  --background: rgba(12, 18, 29, 0.98);
+  --border: 1px solid rgba(151, 179, 217, 0.14);
+  padding-top: 5px;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.2);
+}
+
+ion-tab-button {
+  --color: #77869d;
+  --color-selected: #75adff;
+  font-weight: 600;
+}
+
+ion-tab-button.tab-selected {
+  position: relative;
+}
+
+ion-tab-button.tab-selected::before {
+  position: absolute;
+  top: 0;
+  width: 28px;
+  height: 2px;
+  border-radius: 0 0 2px 2px;
+  background: #4b91ff;
+  content: "";
+}
+
+.hero-poster {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 8px;
+  background: #222;
+}
+
+.hero-poster::part(image) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-grid {
+  --ion-grid-padding: 4px;
+  --ion-grid-column-padding: 6px;
+}
+
+.movie-card {
+  height: calc(100% - 16px);
+  margin: 8px 0;
+  overflow: hidden;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(92, 155, 245, 0.42);
+}
+
+.movie-card ion-card-header {
+  padding: 12px 12px 4px;
+}
+
+.movie-card ion-card-title {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.movie-card ion-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 12px 12px;
+}
+
+.movie-genres {
+  min-height: 2.5em;
+  margin: 0 0 12px;
+  font-size: 12px;
+}
+
+.match-score {
+  font-size: 28px;
+  font-weight: 800;
+  color: #75adff;
+}
+
+.matching-empty-note,
+.tmdb-help {
+  display: block;
+  padding: 14px;
+  border: 1px solid rgba(117, 173, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(31, 68, 116, 0.22);
+  line-height: 1.5;
+}
+
+.matching-section-title {
+  margin: 22px 4px 8px;
+  color: #f5f8ff;
+  font-size: 18px;
+}
+
+.photo-preview {
+  width: 120px;
+  height: 120px;
+  --border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  border: 2px solid rgba(117, 173, 255, 0.8);
+  box-shadow: 0 0 0 5px rgba(75, 145, 255, 0.12);
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.muted {
+  color: #98a7bc;
+}
+
+.auth-content {
+  --padding-start: 18px;
+  --padding-end: 18px;
+  --padding-top: 24px;
+  --padding-bottom: 32px;
+}
+
+.auth-shell {
+  width: min(100%, 520px);
+  margin: clamp(20px, 7vh, 68px) auto 36px;
+}
+
+.auth-heading {
+  margin: 0 0 22px;
+}
+
+.auth-kicker {
+  margin: 0 0 10px;
+  color: #75adff;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.auth-heading h1 {
+  margin: 0;
+  color: #f5f8ff;
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+.auth-heading p:last-child {
+  margin: 10px 0 0;
+  color: #98a7bc;
+  line-height: 1.5;
+}
+
+.auth-card {
+  margin: 0;
+}
+
+.auth-card ion-card-content {
+  padding: 22px;
+}
+
+.auth-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.auth-note {
+  display: block;
+  margin-top: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 380px) {
+  .auth-content {
+    --padding-start: 12px;
+    --padding-end: 12px;
+  }
+
+  .auth-card ion-card-content {
+    padding: 16px;
+  }
+}
